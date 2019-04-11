@@ -24,7 +24,7 @@ public class Distillery {
     private String region;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "distillery")
+    @OneToMany(mappedBy = "distillery", fetch = FetchType.LAZY)
     List<Whisky> whiskys;
 
     public Distillery(String name, String region) {

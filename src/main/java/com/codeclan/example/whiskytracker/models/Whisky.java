@@ -27,11 +27,11 @@ public class Whisky {
     @Column
     private int age;
 
-    public Whisky(String name, Distillery distillery, int year, int age) {
+    public Whisky(String name, int age,int year, Distillery distillery) {
         this.name = name;
-        this.distillery = distillery;
-        this.year = year;
         this.age = age;
+        this.year = year;
+        this.distillery = distillery;
     }
 
     public Long getId() {
